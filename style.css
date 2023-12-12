@@ -1,0 +1,214 @@
+:root {
+    /* Primary */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+
+    /* Accent */
+    --Blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: var(--White);
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    max-width: 1440px;
+    min-height: 100vh;
+    background-image: url('./images/bg-intro-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--Red);
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    width: 50%;
+}
+
+.left h1 {
+    font-weight: 700;
+    font-size: 2.625rem;
+    line-height: 1.1;
+    margin-bottom: 0.938rem;
+}
+
+.left p {
+    font-weight: 400;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.right_header {
+    background-color: var(--Blue);
+    text-align: center;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.right_header p {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.right_header p span {
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.form_container {
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form_container form div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 0.375rem;
+}
+
+.form_container form div input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: var(--White);
+    color: var(--Dark-Blue);
+    font-weight: 700;
+}
+
+::-ms-input-placeholder {
+    /* Edge 12-18 */
+    font-weight: 500;
+}
+
+::placeholder {
+    font-weight: 500;
+}
+
+.form_container form div img {
+    display: none;
+}
+
+.form_container form div .error {
+    position: absolute;
+    right: 1px;
+    bottom: -17px;
+    color: var(--Red);
+    font-size: 11px;
+    font-weight: 400;
+    display: none;
+}
+
+.form_container form button {
+    border: none;
+    background-color: var(--Green);
+    padding: .5rem;
+    border-radius: 0.625rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0px 5px 0px 0px var(--Green);
+    -webkit-box-shadow: 0px 5px 0px 0px var(--Green);
+    -moz-box-shadow: 0px 5px 0px 0px var(--Green);
+}
+
+.form_container form button:hover {
+    opacity: 0.7;
+}
+
+.form_container form p {
+    color: var(--Grayish-Blue);
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.form_container form p span {
+    color: var(--Red);
+    font-size: 11px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 770px) {
+    section {
+        width: 90%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    section {
+        width: 75%;
+    }
+}
