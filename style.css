@@ -205,6 +205,10 @@ section {
     .left {
         text-align: center;
     }
+    .form_container form div input {
+        font-weight: 500;
+        font-size: 11px;
+    }
 }
 
 @media only screen and (max-width: 1440px) {
